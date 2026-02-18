@@ -28,40 +28,6 @@ Follow it **from top to bottom once**, then use later sections for deeper explan
 > Wherever you see `YOUR_PROJECT_ID`, replace it with your real GCP Project ID  
 > (for example: `my-gcp-project-123456`).
 
-### 0. Get this project on your machine
-
-**Environment / requirements:**
-
-| Requirement | Details |
-|-------------|--------|
-| **Git** | Optional; only if cloning. Install from [git-scm.com](https://git-scm.com/). On Windows: `winget install Git.Git` or use Git Bash. |
-| **Folder access** | Write access to the parent folder (e.g. `C:\git\my project`). |
-| **Network** | Internet for `git clone` if using a remote repo. |
-
-If you already have the folder `C:\git\my project\google-cloud-ex` with `app.py`, `main.py`, `Dockerfile`, and `requirements.txt`, you can skip to step 1.
-
-```bash
-# Example: clone your repo (adapt URL to your real git repo)
-cd "C:\git\my project"
-git clone <YOUR_REPO_URL> google-cloud-ex
-cd "C:\git\my project\google-cloud-ex"
-```
-
-Confirm files exist:
-
-```bash
-ls
-# you should see: app.py, main.py, Dockerfile, requirements.txt, DEPLOYMENT_GUIDE.md, ...
-```
-
-**Possible errors and solutions (Step 0):**
-
-| Error | Cause | Solution |
-|-------|--------|----------|
-| `git: command not found` | Git not installed or not on PATH. | Install Git; restart terminal. On Windows, ensure "Git from the command line" was selected during install. |
-| `Permission denied (publickey)` on clone | SSH key not set up for GitHub/GitLab. | Use HTTPS URL instead of SSH, or add your SSH key to the Git host. |
-| `fatal: could not create work tree` | Path doesn't exist or no write permission. | Create parent folder first (`mkdir -p "C:\git\my project"`) and ensure you have write access. |
-
 ### 1. Install and verify gcloud
 
 **Environment / requirements:**
